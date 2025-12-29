@@ -67,14 +67,33 @@ voice_assistant_project/
 └── README.md                  # 项目说明
 ```
 
+## 测试(板子上的路径)
+#### 1.LLM模型转换
+```bash
+cd ～/rknn-llm/rknn-llm-release-v1.2.2/examples/multimodal_model_demo/export/
+
+python export_rkllm.py
+```
+#### 2.ASR模型
+```bash
+python ./models/asr/sensevoice_rknn.py --audio_file data/output.wav 
+```
+如果使用自己的音频文件测试发现识别不正常，你可能需要提前将它转换为16kHz, 16bit, 单声道的wav格式。
+```bash
+ffmpeg -i input.mp3 -f wav -acodec pcm_s16le -ac 1 -ar 16000 output.wav
+```
+#### 3.TTS模型
+```bash
+python ./models/tts/melotts_rknn.py -s "The text you want to generate."
+```
+#### 4.RKNN模型转换
+需要提前安装rknn-toolkit2, 测试可用的版本为2.3.3a25，可从 https://console.zbox.filez.com/l/I00fc3 下载(密码为"rknn")
+
 ## 参考链接
-
-需将模型转换成rknn格式
-
 **ASR**:
 - https://huggingface.co/FunAudioLLM/SenseVoiceSmall/tree/main
 - https://huggingface.co/happyme531/SenseVoiceSmall-RKNN2
-- https://huggingface.co/lovemefan/SenseVoice-onnx/tree/main
+- 下载或转换onnx模型,可以从 https://huggingface.co/lovemefan/SenseVoice-onnx 下载到onnx模型.
 - https://huggingface.co/ThomasTheMaker/SenseVoiceSmall-RKNN2
 
 **TTS**:
@@ -92,3 +111,4 @@ voice_assistant_project/
 **Purple Pi OH2**
 - 设备: Purple Pi OH2 (RK3576)
 - 系统总内存: ~4 GB (3895.01 MB)/~8 GB (7934.67 MB)
+
