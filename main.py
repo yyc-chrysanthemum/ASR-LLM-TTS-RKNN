@@ -269,7 +269,7 @@ def main():
             total_pipeline_time = pipeline_end_time - pipeline_start_time
            
             logger.info("\n" + "~"*50)
-            logger.info("--- 计时结果（流式优化） ---")
+            logger.info("--- 计时结果 ---")
             logger.info(f"🎤 ASR 耗时: {asr_time:.2f}s")
             logger.info(f"⚡ 首句生成时间: {first_sentence_time if first_sentence_time else 0:.2f}s")
             logger.info(f"🧠 LLM 总耗时: {llm_time:.2f}s")
