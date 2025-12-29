@@ -82,3 +82,13 @@ voice_assistant_project/
 
 **LLM**:
 - https://huggingface.co/3ib0n/Qwen2.5-14B-Instruct-rkllm
+
+## 使用设备：RK3588/3576
+
+**🍊 Orange Pi 5 Plus**
+- 设备: Orange Pi 5 Plus (RK3588)
+- 系统总内存: ~8 GB (7934.67 MB)
+
+**Purple Pi OH2**
+- 设备: Purple Pi OH2 (RK3576)
+- 系统总内存: ~4 GB (3895.01 MB)/~8 GB (7934.67 MB)
