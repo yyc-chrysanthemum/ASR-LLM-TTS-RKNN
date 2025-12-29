@@ -1,6 +1,6 @@
 # 语音助手项目
 
-这是一个基于开源模型构建的，基于 RK3588 的语音助手系统，支持 ASR（SenseVoice）、LLM（Qwen2.5-0.5B/1.5B）、TTS（MeloTTS）功能。
+这是一个基于开源模型构建的，基于 RK3588/RK3576 的语音助手系统，支持 ASR（SenseVoice）、LLM（Qwen2.5-0.5B/1.5B）、TTS（MeloTTS）功能。
 
 
 ## 环境要求
